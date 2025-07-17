@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",                        // Современный JavaScript
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],  // Поддержка браузерных API и новых возможностей
+    "allowJs": true,                           // Поддержка .js файлов
+    "skipLibCheck": true,                      // Ускоряет сборку, пропуская проверку типов в .d.ts
+    "strict": true,                            // Включает строгую типизацию
+    "forceConsistentCasingInFileNames": true,  // Проверка регистра в импортах
+    "noEmit": true,                            // Не выводить скомпилированные файлы
+    "esModuleInterop": true,                   // Совместимость с CommonJS-модулями
+    "module": "ESNext",                        // Используется Vite
+    "moduleResolution": "bundler",             // Рекомендуемый режим для Vite (альтернатива node/Classic)
+    "resolveJsonModule": true,                 // Разрешает импорт .json файлов
+    "isolatedModules": true,                   // Требуется для Vite
+    "jsx": "react-jsx",                        // Современный JSX runtime (без необходимости импортировать React)
+    "incremental": true,                       // Кэш для ускорения сборки
+    "paths": {
+      "@/*": ["./src/*"]                       // Алиасы
+    }
+  },
+  "include": ["src"],
+  "exclude": [
+    "node_modules",
+    "dist"                                     // Исключаем выходную папку Vite
+  ]
+}
